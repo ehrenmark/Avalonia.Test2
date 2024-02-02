@@ -18,5 +18,26 @@ build_property.ProjectDir = D:\GitHub\Avalonia.Test2\AvaloniaTest\
 [D:/GitHub/Avalonia.Test2/AvaloniaTest/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[D:/GitHub/Avalonia.Test2/AvaloniaTest/Pages/AbitronOverlay.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/GitHub/Avalonia.Test2/AvaloniaTest/Pages/CertificateOverlay.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/GitHub/Avalonia.Test2/AvaloniaTest/Pages/CslOverlay.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/GitHub/Avalonia.Test2/AvaloniaTest/Pages/DatabaseOverlay.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/GitHub/Avalonia.Test2/AvaloniaTest/Styles/SideBar.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/GitHub/Avalonia.Test2/AvaloniaTest/Styles/Styles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/GitHub/Avalonia.Test2/AvaloniaTest/Views/MainView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [D:/GitHub/Avalonia.Test2/AvaloniaTest/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

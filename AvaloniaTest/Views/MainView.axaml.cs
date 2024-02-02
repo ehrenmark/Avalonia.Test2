@@ -1,17 +1,14 @@
-using System.Diagnostics;
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
 namespace AvaloniaTest.Views;
 
-public partial class MyMainWindow : FluentWindow
+public partial class MainView : UserControl
 {
-    public MyMainWindow()
+    public MainView()
     {
         InitializeComponent();
-        this.AttachDevTools();
-
     }
     
     private void InitializeComponent()

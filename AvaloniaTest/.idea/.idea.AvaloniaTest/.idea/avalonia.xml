@@ -3,7 +3,16 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="App.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Pages/AbitronOverlay.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Pages/Certificate.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Pages/CertificateOverlay.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Pages/CslOverlay.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Styles/SideBar.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Styles/Styles.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Views/MainView.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/MainWindow.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Views/Styles1.axaml" value="AvaloniaTest.csproj" />
       </map>
     </option>
   </component>

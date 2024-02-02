@@ -1,13 +1,22 @@
-<Window xmlns="https://github.com/avaloniaui"
+<views:FluentWindow xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:AvaloniaTest.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AvaloniaTest.Views.MainWindow"
+        xmlns:views="clr-namespace:AvaloniaTest.Views"
+        mc:Ignorable="d" d:DesignWidth="1350" d:DesignHeight="700" Height="800" Width="1400"
+        x:Class="AvaloniaTest.Views.MyMainWindow" 
         x:DataType="vm:MainWindowViewModel"
+        x:Name="MainWindow"
         Icon="/Assets/avalonia-logo.ico"
+        WindowStartupLocation="CenterScreen"
+        Background="{x:Null}"
         Title="AvaloniaTest">
+    <views:FluentWindow.Styles>
+        <Style Selector="TitleBar:fullscreen">
+            <Setter Property="Background" Value="#7f000000" />
+        </Style>
+    </views:FluentWindow.Styles>
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -15,6 +24,7 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-</Window>
+    <Panel Margin="{Binding #MainWindow.OffScreenMargin}">
+        <views:MainView />
+    </Panel>
+</views:FluentWindow>
