@@ -22,7 +22,7 @@
                 <ExperimentalAcrylicBorder.Material>
                     <ExperimentalAcrylicMaterial TintColor="#222222" MaterialOpacity="0.85" TintOpacity="1" />
                 </ExperimentalAcrylicBorder.Material>
-                <TextBlock DataContext="{Binding SelectedItem, ElementName=TabControl}" Text="{Binding Header}" Margin="40 20" FontSize="32" FontWeight="Light" />
+                <TextBlock DataContext="{Binding SelectedItem, ElementName=TabControl}" Margin="40 20" FontSize="32" FontWeight="Light" />
 
             </ExperimentalAcrylicBorder>
         </DockPanel>          
