@@ -2,11 +2,11 @@
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace AvaloniaTest.Pages;
+namespace AvaloniaTest.Views.Documents;
 
-public partial class CertificateOverlay : UserControl
+public partial class AbitronView : UserControl
 {
-    public CertificateOverlay()
+    public AbitronView()
     {
         InitializeComponent();
     }

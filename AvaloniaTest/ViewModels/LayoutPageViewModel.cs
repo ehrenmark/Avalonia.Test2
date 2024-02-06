@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using Avalonia.Media;
 using AvaloniaTest.ViewModels;
 
-namespace XamlControlsGallery.ViewModels
+namespace AvaloniaTest.ViewModels
 {
     public class ItemViewModel
     {

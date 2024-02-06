@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Reactive;
+using AvaloniaTest.ViewModels.Documents;
+using DynamicData.Binding;
 using ReactiveUI;
 
 namespace AvaloniaTest.ViewModels
@@ -10,6 +12,11 @@ namespace AvaloniaTest.ViewModels
 
         public MainWindowViewModel()
         {
+            MenuItems.Add(new SideMenuItem() { Title = "Side Test1", Content = new SideMenuTextViewModel(){ Txt = "Test1"}});
+            MenuItems.Add(new SideMenuItem() { Title = "Side Test2", Content = new SideMenuTextViewModel() {Txt = "Test2"}});
+            MenuItems.Add(new SideMenuItem() { Title = "Another Test3", Content = new AbitronViewModel() {Text = "Another"}});
+            MenuItems[2].IsActive = true;
+            MainContent = MenuItems[0].Content;
             ToggleMenuItemCheckedCommand = ReactiveCommand.Create(() =>
             {
                 IsMenuItemChecked = !IsMenuItemChecked;
@@ -25,7 +32,30 @@ namespace AvaloniaTest.ViewModels
         public ReactiveCommand<Unit, Unit> ToggleMenuItemCheckedCommand { get; }
 
         public string Greeting => "Welcome to Avalonia!";
+        
+        private MainContentViewModel _mainContent;
 
+        public ObservableCollectionExtended<SideMenuItem> MenuItems { get; set; } = new();
+
+        public MainContentViewModel MainContent
+        {
+            get => _mainContent;
+            set => this.RaiseAndSetIfChanged(ref _mainContent, value);
+        }
+
+        public void ButtonClickedCommand(SideMenuItem item)
+        {
+            if (MainContent.CanLeave)
+            {
+                MainContent = item.Content;
+                if (item == MenuItems[1])
+                {
+                    MenuItems.Insert(2,new SideMenuItem() { Title = "- Side Test2", Content = new SideMenuTextViewModel() {Txt = "Test2"}});
+                }
+            }
+            
+        
+        }
 
     }
 }

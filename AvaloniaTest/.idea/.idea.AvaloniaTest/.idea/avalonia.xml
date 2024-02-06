@@ -10,6 +10,8 @@
         <entry key="Pages/CslOverlay.axaml" value="AvaloniaTest.csproj" />
         <entry key="Styles/SideBar.axaml" value="AvaloniaTest.csproj" />
         <entry key="Styles/Styles.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Views/Documents/AbitronView.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Views/Documents/SideMenuTextView.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/MainView.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/MainWindow.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/Styles1.axaml" value="AvaloniaTest.csproj" />
