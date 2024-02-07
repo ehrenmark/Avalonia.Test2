@@ -6,7 +6,7 @@ using AvaloniaTest.Views;
 
 namespace AvaloniaTest;
 
-public partial class App : Application
+public class App : Application
 {
     public override void Initialize()
     {

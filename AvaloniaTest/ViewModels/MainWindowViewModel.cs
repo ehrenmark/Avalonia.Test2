@@ -14,7 +14,7 @@ namespace AvaloniaTest.ViewModels
         {
             MenuItems.Add(new SideMenuItem() { Title = "Side Test1", Content = new SideMenuTextViewModel(){ Txt = "Test1"}});
             MenuItems.Add(new SideMenuItem() { Title = "Side Test2", Content = new SideMenuTextViewModel() {Txt = "Test2"}});
-            MenuItems.Add(new SideMenuItem() { Title = "Another Test3", Content = new AbitronViewModel() {Text = "Another"}});
+            MenuItems.Add(new SideMenuItem() { Title = "Another Test3", Content = new AbitronViewModel() });
             MenuItems[2].IsActive = true;
             MainContent = MenuItems[0].Content;
             ToggleMenuItemCheckedCommand = ReactiveCommand.Create(() =>

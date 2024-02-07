@@ -1,3 +1,4 @@
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\TestData\output_2024-02-07_15-16-54.log
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\AvaloniaTest.exe
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\AvaloniaTest.deps.json
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\AvaloniaTest.runtimeconfig.json
@@ -40,6 +41,7 @@ D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\SkiaSharp.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\Splat.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\System.Drawing.Common.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\System.IO.Pipelines.dll
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\System.IO.Ports.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\System.Reactive.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\Tmds.DBus.Protocol.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\cs\Microsoft.CodeAnalysis.resources.dll
@@ -107,6 +109,11 @@ D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\win-arm64\native
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\linux-arm\native\libSkiaSharp.so
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\linux-arm64\native\libSkiaSharp.so
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
@@ -117,6 +124,8 @@ D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\win-x64\native\l
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\win-x86\native\libSkiaSharp.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\unix\lib\net7.0\System.IO.Ports.dll
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.IO.Ports.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\AvaloniaTest.csproj.AssemblyReference.cache
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\Avalonia\Resources.Inputs.cache
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\Avalonia\resources
@@ -124,6 +133,7 @@ D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\AvaloniaTest.GeneratedMSB
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\AvaloniaTest.AssemblyInfoInputs.cache
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\AvaloniaTest.AssemblyInfo.cs
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\AvaloniaTest.csproj.CoreCompileInputs.cache
+D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\AvaloniaTest.sourcelink.json
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\Avalonia\references
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\Avalonia\original.dll
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\Avalonia\original.pdb

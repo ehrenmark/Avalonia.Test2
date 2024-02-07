@@ -11,7 +11,7 @@
         <documents:AbitronViewModel/>
     </Design.DataContext>
     <StackPanel>
-        <Button Content="{Binding Text }"></Button>
+        <Button> </Button>
         <CheckBox IsChecked="{Binding CanLeave}"></CheckBox>
     </StackPanel>
 </UserControl>
