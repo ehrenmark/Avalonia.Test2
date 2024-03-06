@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OQWlAoH7bZEIUTEd/DQ0hVOUBU+cJOr1Wfx5jLg1djDga22WdLfJxp99k5qCOXwI4nx4n8ijf085hO1Z/uS8Hg==",
+  "dgSpecHash": "zQI+T2E/gfnXmDjmMzcutouDUpxKIV4aa1P40/8OKc1JELz2thviUKGWwBTYvAPsQFX68VeEIZAQAiF1jvQQNg==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\Avalonia.Test2\\AvaloniaTest\\AvaloniaTest.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\m.kagermeier\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\m.kagermeier\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\m.kagermeier\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\m.kagermeier\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\m.kagermeier\\.nuget\\packages\\reactiveui\\18.3.1\\reactiveui.18.3.1.nupkg.sha512",
     "C:\\Users\\m.kagermeier\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
     "C:\\Users\\m.kagermeier\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",

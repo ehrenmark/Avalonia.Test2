@@ -16,7 +16,7 @@ public class FakePortHandler : ISerialPortHandler
     public void Open()
     {
         _content = File.ReadAllBytes(_testFileName);
-        aTimer = new System.Timers.Timer(2000);
+        aTimer = new System.Timers.Timer(1000);
         aTimer.Elapsed += ATimerOnElapsed;
         aTimer.AutoReset = true;
         aTimer.Enabled = true;

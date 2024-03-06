@@ -1,0 +1,334 @@
+﻿{
+  "modelName": "FernbedienungAbitron",
+  "version": "1.0",
+  "switches": [
+    {
+      "name": "Stop",
+      "DKState": "31",
+      "DatState": "1",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleStop"
+    },
+    {
+      "name": "MotorVerify",
+      "DKState": "3",
+      "DatState": "1",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleFull"
+    },
+    {
+      "name": "RadioStart",
+      "DKState": "1",
+      "DatState": "4",
+      "positionX": "200",
+      "positionY": "200",
+      "CircleType": "CircleFull"
+    },
+    {
+      "name": "TrampUp",
+      "DKState": "15",
+      "DatState": "2",
+      "positionX": "300",
+      "positionY": "300",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "TramDown",
+      "DKState": "16",
+      "DatState": "2",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "TramLeft",
+      "DKState": "17",
+      "DatState": "3",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfLeft"
+    },
+    {
+      "name": "TramRight",
+      "DKState": "18",
+      "DatState": "3",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfRight"
+    },
+    {
+      "name": "CutterOn",
+      "DKState": "6",
+      "DatState": "1",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "CutterOff",
+      "DKState": "11",
+      "DatState": "2",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "ConveyorOn",
+      "DKState": "7",
+      "DatState": "1",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "ConveyorOff",
+      "DKState": "12",
+      "DatState": "2",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "ConveyorReverseOn",
+      "DKState": "8",
+      "DatState": "1",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "ConveyorReverseOff",
+      "DKState": "12",
+      "DatState": "2",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "HydraulicsOn",
+      "DKState": "5",
+      "DatState": "1",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "HydraulicsOff",
+      "DKState": "13",
+      "DatState": "2",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "Spare2Up",
+      "DKState": "19",
+      "DatState": "3",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "Spare2Down",
+      "DKState": "29",
+      "DatState": "4",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "Spare1Up",
+      "DKState": "20",
+      "DatState": "3",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "Spare1Down",
+      "DKState": "14",
+      "DatState": "2",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "SprayDustOn",
+      "DKState": "40",
+      "DatState": "6",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "SprayDustOff",
+      "DKState": "41",
+      "DatState": "5",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "CoolingOn",
+      "DKState": "39",
+      "DatState": "5",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "CoolingOff",
+      "DKState": "38",
+      "DatState": "5",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "Sump",
+      "DKState": "43",
+      "DatState": "6",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleFull"
+    },
+    {
+      "name": "Fast",
+      "DKState": "4",
+      "DatState": "1",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleFull"
+    },
+    {
+      "name": "TramLeft",
+      "DKState": "44",
+      "DatState": "6",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfLeft"
+    },
+    {
+      "name": "TramRight",
+      "DKState": "33",
+      "DatState": "5",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfRight"
+    },
+    {
+      "name": "ChainUp",
+      "DKState": "23",
+      "DatState": "3",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "ChainDown",
+      "DKState": "24",
+      "DatState": "3",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "ChainLeft",
+      "DKState": "26",
+      "DatState": "4",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfLeft"
+    },
+    {
+      "name": "ChainRight",
+      "DKState": "25",
+      "DatState": "4",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfRight"
+    },
+    {
+      "name": "CutterBoomUp",
+      "DKState": "27",
+      "DatState": "4",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "CutterBoomDown",
+      "DKState": "28",
+      "DatState": "4",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "ShovelUp",
+      "DKState": "36",
+      "DatState": "5",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "ShovelDown",
+      "DKState": "37",
+      "DatState": "5",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "StabilizerUp",
+      "DKState": "34",
+      "DatState": "5",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "StabilizerDown",
+      "DKState": "35",
+      "DatState": "5",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "AuxFanOn",
+      "DKState": "21",
+      "DatState": "3",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfUp"
+    },
+    {
+      "name": "AuxFanOff",
+      "DKState": "22",
+      "DatState": "3",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfDown"
+    },
+    {
+      "name": "ReleaseLeft",
+      "DKState": "9",
+      "DatState": "2",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfLeft"
+    },
+    {
+      "name": "ReleaseRight",
+      "DKState": "9",
+      "DatState": "2",
+      "positionX": "100",
+      "positionY": "100",
+      "CircleType": "CircleHalfRight"
+    }
+  ]
+}

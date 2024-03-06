@@ -29,6 +29,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [D:/GitHub/Avalonia.Test2/AvaloniaTest/Views/Documents/AbitronView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[D:/GitHub/Avalonia.Test2/AvaloniaTest/Views/Documents/AbitronViewRemote.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [D:/GitHub/Avalonia.Test2/AvaloniaTest/Views/Documents/SideMenuTextView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

@@ -3,15 +3,57 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:documents="clr-namespace:AvaloniaTest.ViewModels.Documents"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:documents1="clr-namespace:AvaloniaTest.Views.Documents"
+             mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="700"
              x:CompileBindings="True"
              x:DataType="documents:AbitronViewModel"
              x:Class="AvaloniaTest.Views.Documents.AbitronView">
-    <Design.DataContext>
+    
+    <Grid>
+
+        <documents1:AbitronViewRemote Margin="50">
+            
+        </documents1:AbitronViewRemote>
+    </Grid>
+    
+    <!--<Design.DataContext>
         <documents:AbitronViewModel/>
     </Design.DataContext>
-    <StackPanel>
-        <Button> </Button>
-        <CheckBox IsChecked="{Binding CanLeave}"></CheckBox>
-    </StackPanel>
+   
+    <Panel>
+        <Image Margin="50" d:DesignWidth="1400" d:DesignHeight="700"
+               Source="avares://AvaloniaTest/Assets/Abitron.png"/>
+        
+        <ItemsControl ItemsSource="{Binding Switches}">
+            
+            <ItemsControl.ItemTemplate>
+                <DataTemplate> 
+                    <CheckBox Height="{Binding PositionY}" Width="{Binding PositionX}" IsChecked="{Binding State}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Panel>-->
+    
+    <!--<ScrollViewer>
+        
+        ~1~ Beispiel-Elemente, um die Datenbindung zu zeigen @1@
+        <ItemsControl ItemsSource="{Binding DKState}">
+            
+            <ItemsControl.ItemTemplate>
+                <DataTemplate> 
+                    <CheckBox IsChecked="{Binding State}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
+        ~1~<ItemsControl ItemsSource="{Binding DatArray}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <ToggleButton IsChecked="{Binding}" Content="Toggle" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>@1@
+
+    </ScrollViewer>-->
+    
 </UserControl>

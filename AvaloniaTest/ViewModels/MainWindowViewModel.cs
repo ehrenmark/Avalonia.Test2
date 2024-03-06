@@ -3,6 +3,7 @@ using System.Reactive;
 using AvaloniaTest.ViewModels.Documents;
 using DynamicData.Binding;
 using ReactiveUI;
+using AvaloniaTest.Models.Abitron;
 
 namespace AvaloniaTest.ViewModels
 {
@@ -12,6 +13,9 @@ namespace AvaloniaTest.ViewModels
 
         public MainWindowViewModel()
         {
+            SetupModel setupModel = new SetupModel();
+            
+            
             MenuItems.Add(new SideMenuItem() { Title = "Side Test1", Content = new SideMenuTextViewModel(){ Txt = "Test1"}});
             MenuItems.Add(new SideMenuItem() { Title = "Side Test2", Content = new SideMenuTextViewModel() {Txt = "Test2"}});
             MenuItems.Add(new SideMenuItem() { Title = "Another Test3", Content = new AbitronViewModel() });
@@ -21,6 +25,7 @@ namespace AvaloniaTest.ViewModels
             {
                 IsMenuItemChecked = !IsMenuItemChecked;
             });
+            
         }
 
         public bool IsMenuItemChecked
@@ -50,7 +55,7 @@ namespace AvaloniaTest.ViewModels
                 MainContent = item.Content;
                 if (item == MenuItems[1])
                 {
-                    MenuItems.Insert(2,new SideMenuItem() { Title = "- Side Test2", Content = new SideMenuTextViewModel() {Txt = "Test2"}});
+                    MenuItems.Insert(2,new SideMenuItem() { Title = "- Side Test2", Content = new AbitronViewModel() });
                 }
             }
             

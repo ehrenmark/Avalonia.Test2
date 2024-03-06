@@ -144,3 +144,5 @@ D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\AvaloniaTest.pdb
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\AvaloniaTest.csproj.CopyComplete
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\AvaloniaTest.genruntimeconfig.cache
 D:\GitHub\Avalonia.Test2\AvaloniaTest\obj\Debug\net7.0\ref\AvaloniaTest.dll
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\GitHub\Avalonia.Test2\AvaloniaTest\bin\Debug\net7.0\SetupJSON\setupabitron.json

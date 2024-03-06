@@ -1,0 +1,828 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:documents="clr-namespace:AvaloniaTest.ViewModels.Documents"
+             mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="700"
+             x:CompileBindings="True"
+             x:DataType="documents:AbitronViewModel"
+             x:Class="AvaloniaTest.Views.Documents.AbitronViewRemote">
+    
+    <Design.DataContext>
+        <documents:AbitronViewModel/>
+    </Design.DataContext>
+    
+
+    
+    <Panel>
+        <Viewbox>
+            <Grid>
+            <Image  Source="avares://AvaloniaTest/Assets/Abitron.png"/>
+        <Grid RowDefinitions="235,*" ColumnDefinitions="*">
+            <Grid Grid.Row="0" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="700,400">
+                <Grid Grid.Row="0" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="38,80,146,80,35,80,28,125,88">
+                    <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                    </Border>
+                    
+                    <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,*" ColumnDefinitions="*">
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Red" Text="ReleaseLeft"></TextBox>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                        </Border>
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                    </Border>
+
+                    <Grid Grid.Row="0" Grid.Column="3" RowDefinitions="63,80,92" ColumnDefinitions="*">
+                        
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Red" Text="Motor Verify"></TextBox>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                        </Border>
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="0" Grid.Column="4" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="Red" Text="]"></TextBlock>
+                    </Border>
+                    
+                    <Grid Grid.Row="0" Grid.Column="5" RowDefinitions="63,80,92" ColumnDefinitions="*">
+                        
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Red" Text="Radio Start"></TextBox>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                        </Border>
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="0" Grid.Column="6" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                    </Border>
+                    
+                    
+                    <Grid Grid.Row="0" Grid.Column="7" RowDefinitions="40,125,70" ColumnDefinitions="*">
+                        
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Red" Text="Stop"></TextBox>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                        </Border>
+                        
+                    </Grid>
+                    
+                    
+                    <Border Grid.Row="0" Grid.Column="8" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="Red" Text=""></TextBlock>
+                    </Border>
+                    
+                    
+
+                    
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,23,80,80,12" ColumnDefinitions="*">
+                    
+                    <Grid Grid.Row="0" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="290,80,30">
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Orange" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="1" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Orange" Text="ReleaseRight"></TextBox>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Orange" Text=""></TextBlock>
+                        </Border>
+                    </Grid>
+                    
+                    <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="Orange" Text=""></TextBlock>
+                    </Border>
+
+                    <Grid Grid.Row="2" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="57,80,36,80,147">
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Orange" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="1" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Orange" Text="Sump"></TextBox>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Orange" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="3" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Orange" Text="Fast"></TextBox>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="4" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Orange" Text=""></TextBlock>
+                        </Border>
+                    </Grid>
+ 
+                    <Grid Grid.Row="3" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="114,40,40,206">
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Orange" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="1" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Orange" Text="TramLeft"></TextBox>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Orange" Text="TramRight"></TextBox>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="3" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Orange" Text=""></TextBlock>
+                        </Border>
+                    </Grid>
+                    
+                    <Border Grid.Row="4" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="Orange" Text=""></TextBlock>
+                    </Border>
+                </Grid>
+                
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="400,300,400">
+                <Grid Grid.Row="0" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="37,80,31,80,36,80,56">
+                    <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                    </Border>
+
+                    <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="24,40,40,75,40,40,75,80,51" ColumnDefinitions="*">
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="LimeGreen" Text="TramUp"></TextBox>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="LimeGreen" Text="TramDown"></TextBox>
+                        </Border>
+                        <Border Grid.Row="3" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="4" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="LimeGreen" Text="CutterOn"></TextBox>
+                        </Border>
+                        <Border Grid.Row="5" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="LimeGreen" Text="CutterOff"></TextBox>
+                        </Border>
+                        <Border Grid.Row="6" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="7" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="8" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                    </Border>
+                    
+                    <Grid Grid.Row="0" Grid.Column="3" RowDefinitions="24,80,75,40,40,75,40,40,51" ColumnDefinitions="*">
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Grid Grid.Row="1" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="40,40">
+                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="LimeGreen" Text="TramLeft"></TextBox>
+                            </Border>
+                            <Border Grid.Row="0" Grid.Column="1" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="LimeGreen" Text="TramRight"></TextBox>
+                            </Border>
+                        </Grid>
+                        <Border Grid.Row="2" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="3" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="LimeGreen" Text="ConveyorOn"></TextBox>
+                        </Border>
+                        <Border Grid.Row="4" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="LimeGreen" Text="ConveyorOff"></TextBox>
+                        </Border>
+                        <Border Grid.Row="5" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="6" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="LimeGreen" Text="Conveyor ReverseOn"></TextBox>
+                        </Border>
+                        <Border Grid.Row="7" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="LimeGreen" Text="Conveyor ReverseOff"></TextBox>
+                        </Border>
+                        <Border Grid.Row="8" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="0" Grid.Column="4" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                    </Border>
+                    
+                    <Grid Grid.Row="0" Grid.Column="5" RowDefinitions="24,80,75,40,40,75,80,51" ColumnDefinitions="*">
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="3" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="LimeGreen" Text="HydraulicsOn"></TextBox>
+                        </Border>
+                        <Border Grid.Row="4" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="LimeGreen" Text="HydraulicsOff"></TextBox>
+                        </Border>
+                        <Border Grid.Row="5" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="6" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        <Border Grid.Row="7" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                        </Border>
+                        
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="0" Grid.Column="6" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
+                    </Border>
+                    
+                        
+                    
+
+
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="24,80,75,80,75,80,51" ColumnDefinitions="*">
+        
+                    <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                    </Border>
+                    
+                    <Grid Grid.Row="1" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="46,80,50,80,44">
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                        </Border>
+                        
+                        <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,40" ColumnDefinitions="*">
+                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="DarkBlue" Text="Spare2Up"></TextBox>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="DarkBlue" Text="Spare2Down"></TextBox>
+                            </Border>
+                        </Grid>
+                        
+                        <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                        </Border>
+
+                        <Grid Grid.Row="0" Grid.Column="3" RowDefinitions="40,40" ColumnDefinitions="*">
+                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="DarkBlue" Text="Spare1Up"></TextBox>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="DarkBlue" Text="Spare1Down"></TextBox>
+                            </Border>
+                        </Grid>
+                        
+                        <Border Grid.Row="0" Grid.Column="4" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                        </Border>
+
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="2" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                    </Border>
+                    
+                    <Grid Grid.Row="3" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="110,80,110">
+                        
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                        </Border>
+                        
+                        <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,40" ColumnDefinitions="*">
+                            
+                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="DarkBlue" Text="SprayDustOn"></TextBox>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="DarkBlue" Text="SprayDustOff"></TextBox>
+                            </Border>
+                        </Grid>
+                        
+                        <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                        </Border>
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="4" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                    </Border>
+                    
+                    <Grid Grid.Row="5" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="110,80,110">
+                        
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                        </Border>
+                        
+                        <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,40" ColumnDefinitions="*">
+                            
+                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="DarkBlue" Text="CoolingOn"></TextBox>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="DarkBlue" Text="CoolingOff"></TextBox>
+                            </Border>
+                        </Grid>
+                        
+                        <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                        </Border>
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="6" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="DarkBlue" Text=""></TextBlock>
+                    </Border>
+                    
+                </Grid>
+                
+                
+                <Grid Grid.Row="0" Grid.Column="2" RowDefinitions="24,80,230,80,51" ColumnDefinitions="*">
+                    <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                    </Border>
+                    
+                    <Grid Grid.Row="1" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="57,80,36,40,40,36,80,31">
+                        
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                        </Border>
+                        
+                        <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,40" ColumnDefinitions="*">
+                            
+                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="Purple" Text="ChainUp"></TextBox>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="Purple" Text="ChainDown"></TextBox>
+                            </Border>
+                        </Grid>
+                        
+                        <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                        </Border>
+                        
+                        <Border Grid.Row="0" Grid.Column="3" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Purple" Text="ChainLeft"></TextBox>
+                        </Border>
+                        
+                        <Border Grid.Row="0" Grid.Column="4" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBox  Opacity="0.5" Background="Purple" Text="ChainRight"></TextBox>
+                        </Border>
+            
+                        
+                        <Border Grid.Row="0" Grid.Column="5" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                        </Border>
+                        
+                        <Grid Grid.Row="0" Grid.Column="6" RowDefinitions="40,40" ColumnDefinitions="*">
+                            
+                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="Purple" Text="CutterBoomUp"></TextBox>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="Purple" Text="CutterBoomDown"></TextBox>
+                            </Border>
+                        </Grid>
+                        
+                        <Border Grid.Row="0" Grid.Column="7" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                        </Border>
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="2" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                    </Border>
+                    
+                    <Grid Grid.Row="3" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="57,80,36,80,36,80,31">
+                        
+                        <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                        </Border>
+                        
+                        <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,40" ColumnDefinitions="*">
+                            
+                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="Purple" Text="ShovelUp"></TextBox>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="Purple" Text="ShovelDown"></TextBox>
+                            </Border>
+                        </Grid>
+                        
+                        <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                        </Border>
+                        
+                        <Grid Grid.Row="0" Grid.Column="3" RowDefinitions="40,40" ColumnDefinitions="*">
+                            
+                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="Purple" Text="StabilizerUp"></TextBox>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="Purple" Text="StabilizerDown"></TextBox>
+                            </Border>
+                        </Grid>
+            
+                        
+                        <Border Grid.Row="0" Grid.Column="4" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                        </Border>
+                        
+                        <Grid Grid.Row="0" Grid.Column="5" RowDefinitions="40,40" ColumnDefinitions="*">
+                            
+                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="Purple" Text="AuxFanOn"></TextBox>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                                    BorderBrush="Black"
+                                    BorderThickness="1"
+                                    Opacity="0.5">
+                                <TextBox  Opacity="0.5" Background="Purple" Text="AuxFanOff"></TextBox>
+                            </Border>
+                        </Grid>
+                        
+                        <Border Grid.Row="0" Grid.Column="7" Background="Gainsboro"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                        </Border>
+                        
+                    </Grid>
+                    
+                    <Border Grid.Row="4" Grid.Column="0" Background="Gainsboro"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Opacity="0.5">
+                        <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                    </Border>
+                    
+                    
+                    
+                </Grid>
+
+            </Grid>
+
+
+            
+
+
+        </Grid>
+        
+        <!--<ItemsControl ItemsSource="{Binding Switches}">
+            
+            <ItemsControl.ItemTemplate>
+                <DataTemplate> 
+                    <CheckBox Height="{Binding PositionY}" 
+                              Width="{Binding PositionX}" 
+                              IsChecked="{Binding State}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>-->
+            </Grid>
+        </Viewbox>
+    </Panel>
+    
+    
+</UserControl>
