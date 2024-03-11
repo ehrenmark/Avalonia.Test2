@@ -27,7 +27,7 @@
       "CircleType": "CircleFull"
     },
     {
-      "name": "TrampUp",
+      "name": "TramUp",
       "DKState": "15",
       "DatState": "2",
       "positionX": "300",
@@ -43,7 +43,7 @@
       "CircleType": "CircleHalfDown"
     },
     {
-      "name": "TramLeft",
+      "name": "TramTurnLeft",
       "DKState": "17",
       "DatState": "3",
       "positionX": "100",
@@ -51,7 +51,7 @@
       "CircleType": "CircleHalfLeft"
     },
     {
-      "name": "TramRight",
+      "name": "TramTurnRight",
       "DKState": "18",
       "DatState": "3",
       "positionX": "100",
@@ -203,7 +203,7 @@
       "CircleType": "CircleFull"
     },
     {
-      "name": "TramLeft",
+      "name": "TramSlewLeft",
       "DKState": "44",
       "DatState": "6",
       "positionX": "100",
@@ -211,7 +211,7 @@
       "CircleType": "CircleHalfLeft"
     },
     {
-      "name": "TramRight",
+      "name": "TramSlewRight",
       "DKState": "33",
       "DatState": "5",
       "positionX": "100",

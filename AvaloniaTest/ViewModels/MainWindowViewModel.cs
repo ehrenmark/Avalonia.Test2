@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Reactive;
+using System.Xml.Linq;
 using AvaloniaTest.ViewModels.Documents;
 using DynamicData.Binding;
 using ReactiveUI;
 using AvaloniaTest.Models.Abitron;
+using DynamicData;
 
 namespace AvaloniaTest.ViewModels
 {
@@ -16,10 +19,11 @@ namespace AvaloniaTest.ViewModels
             SetupModel setupModel = new SetupModel();
             
             
-            MenuItems.Add(new SideMenuItem() { Title = "Side Test1", Content = new SideMenuTextViewModel(){ Txt = "Test1"}});
-            MenuItems.Add(new SideMenuItem() { Title = "Side Test2", Content = new SideMenuTextViewModel() {Txt = "Test2"}});
-            MenuItems.Add(new SideMenuItem() { Title = "Another Test3", Content = new AbitronViewModel() });
-            MenuItems[2].IsActive = true;
+            MenuItems.Add(new SideMenuItem() { Title = "Setup", Content = new SideMenuTextViewModel(){ Txt = "Setup"}});
+            MenuItems.Add(new SideMenuItem() { Title = "Abitron", Content = new SideMenuTextViewModel() {Txt = "Abitron"}});
+            MenuItems.Add(new SideMenuItem() { Title = "Hetronic", Content = new SideMenuTextViewModel() });
+            MenuItems.Add(new SideMenuItem() { Title = "CSL", Content = new SideMenuTextViewModel() });
+            MenuItems[1].IsActive = true;
             MainContent = MenuItems[0].Content;
             ToggleMenuItemCheckedCommand = ReactiveCommand.Create(() =>
             {
@@ -53,14 +57,23 @@ namespace AvaloniaTest.ViewModels
             if (MainContent.CanLeave)
             {
                 MainContent = item.Content;
-                if (item == MenuItems[1])
+
+                // Check if AbitronViewModel item already exists
+                var existingAbitronItem = MenuItems.FirstOrDefault(menuItem => menuItem.Title == "- Abitron Overview");
+
+                // If AbitronViewModel item already exists, remove it
+                if (existingAbitronItem != null)
                 {
-                    MenuItems.Insert(2,new SideMenuItem() { Title = "- Side Test2", Content = new AbitronViewModel() });
+                    MenuItems.Remove(existingAbitronItem);
+                }
+                // If AbitronViewModel item doesn't exist, insert it
+                else if (item == MenuItems[1])
+                {
+                    MenuItems.Insert(2, new SideMenuItem() { Title = "- Abitron Overview", Content = new AbitronViewModel() });
                 }
             }
-            
-        
         }
+
 
     }
 }

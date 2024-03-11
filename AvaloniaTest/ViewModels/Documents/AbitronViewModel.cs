@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
+using Avalonia.Collections;
 using Avalonia.Controls.Primitives;
 using AvaloniaTest.Models.Abitron;
 using DynamicData;
@@ -18,12 +19,15 @@ public class SwitchViewModel : ViewModelBase
 
     public SwitchViewModel(SwitchConfig config)
     {
+        Name = config.Name;
         DKState = config.DKState;
         DatState = config.DatState;
         PositionX = config.PositionX;
         PositionY = config.PositionY;
         CircleType = config.CircleType;
     }
+    
+    public string Name { get; } 
 
     public bool State
     {
@@ -36,7 +40,12 @@ public class SwitchViewModel : ViewModelBase
 
     public void Update(bool[] data)
     {
-        if (data[DKState]) State = true;
+        if (data[DKState])
+        {
+            State = true;
+            Console.WriteLine($"{Name} pressed");
+        }
+            
         else State = false;
     }
 
@@ -53,17 +62,17 @@ public class AbitronViewModel : MainContentViewModel
     private ISerialPortHandler _serialPortHandler;
     private HSTelegram _telegram;
     private List<byte> _buffer;
-    private ObservableCollection<SwitchViewModel> _dkstate;
+    private AvaloniaDictionary<string, SwitchViewModel> _switches;
     private byte[] _datarray;
     
     
-    public ObservableCollection<SwitchViewModel> Switches
+    public AvaloniaDictionary<string, SwitchViewModel> Switches
     {
-        get { return _dkstate; }
+        get { return _switches; }
         set
         {
-            _dkstate = value;
-            this.RaiseAndSetIfChanged(ref _dkstate, value);
+            _switches = value;
+            this.RaiseAndSetIfChanged(ref _switches, value);
             //OnPropertyChanged(nameof(DKState));
         }
     }
@@ -85,7 +94,7 @@ public class AbitronViewModel : MainContentViewModel
     {
         _serialPortHandler = new FakePortHandler();
         _telegram = new HSTelegram();
-        _buffer = new List<byte>();
+        _buffer = new List<byte>(10000);
         
         _serialPortHandler.Open();
         _serialPortHandler.DataReceived+=DataReceived;
@@ -97,7 +106,7 @@ public class AbitronViewModel : MainContentViewModel
         Switches = new();
         foreach (var configDataSwitch in configData.Switches)
         {
-            Switches.Add(new SwitchViewModel(configDataSwitch));
+            Switches.Add(configDataSwitch.Name, new SwitchViewModel(configDataSwitch));
         }
         
         
@@ -132,11 +141,10 @@ public class AbitronViewModel : MainContentViewModel
         //     Switches[i].State = state[i];
         // }
 
-        foreach (var sw in Switches)
+        foreach (var sw in Switches.Keys)
         {
-            sw.Update(state);
+            Switches[sw].Update(state);
         }
-        
         
         //DatArray = ((HSTelegram) e.TelegramType).DatArray;
     }
