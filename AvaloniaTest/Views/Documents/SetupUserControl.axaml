@@ -1,0 +1,51 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:documents="clr-namespace:AvaloniaTest.ViewModels.Documents"
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="600"
+             x:DataType="documents:SetupViewModel"
+             x:Class="AvaloniaTest.Views.Documents.SetupUserControl">
+
+    <Design.DataContext>
+        <documents:SetupViewModel/>
+    </Design.DataContext>
+    
+    <Panel>
+        <Viewbox>
+            <StackPanel>
+                <Grid RowDefinitions="100,100,100" ColumnDefinitions="300,400,300">
+                    <Grid Grid.Row="0" Grid.Column="0"></Grid>
+                    <Grid Grid.Row="1" Grid.Column="0"></Grid>
+                    <Grid Grid.Row="2" Grid.Column="0"></Grid>
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <TextBlock  FontSize="30" HorizontalAlignment="Center" Height="100">
+                            <Run Text="Please connect your device &#x0a; and choose your SerialPort!" Foreground="White">
+                                
+                                
+                            </Run>
+                        </TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <ComboBox Width="300" Height="50" ItemsSource="{Binding  DropdownItems}" SelectedItem="{Binding SelectedDropdownItem}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}" FontSize="30"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="1">
+                        <Button Command="{Binding ConfirmSelection}" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="Bestätigen" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="2"></Grid>
+                    <Grid Grid.Row="1" Grid.Column="2"></Grid>
+                    <Grid Grid.Row="2" Grid.Column="2"></Grid>
+                    
+                </Grid>
+            </StackPanel>
+        </Viewbox>
+    </Panel>
+</UserControl>

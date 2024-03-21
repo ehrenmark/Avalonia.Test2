@@ -13,6 +13,8 @@
         <entry key="Views/Documents/AbitronLayout.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/Documents/AbitronView.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/Documents/AbitronViewRemote.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Views/Documents/SetupUserControl.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Views/Documents/SetupView.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/Documents/SideMenuTextView.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/MainView.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/MainWindow.axaml" value="AvaloniaTest.csproj" />

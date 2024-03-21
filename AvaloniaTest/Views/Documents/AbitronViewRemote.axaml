@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:documents="clr-namespace:AvaloniaTest.ViewModels.Documents"
-             mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="700"
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="700"
              x:CompileBindings="True"
              x:DataType="documents:AbitronViewModel"
              x:Class="AvaloniaTest.Views.Documents.AbitronViewRemote"
@@ -23,10 +23,10 @@
             <Grid Grid.Row="0" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="700,400">
                 <Grid Grid.Row="0" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="38,80,146,80,35,80,28,125,88">
                     <Border Grid.Row="0" Grid.Column="0" Background="Transparent"
-                            BorderBrush="Transparent"
-                            BorderThickness="1"
+                            BorderBrush="Blue"
+                            BorderThickness="5"
                             Opacity="0.5">
-                        <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                        <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                     </Border>
                     
                     <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,*" ColumnDefinitions="*">
@@ -53,7 +53,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         
                     </Grid>
@@ -62,7 +62,7 @@
                             BorderBrush="Transparent"
                             BorderThickness="1"
                             Opacity="0.5">
-                        <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                        <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                     </Border>
 
                     <Grid Grid.Row="0" Grid.Column="3" RowDefinitions="63,80,92" ColumnDefinitions="*">
@@ -71,7 +71,7 @@
                             BorderBrush="Transparent"
                             BorderThickness="1"
                             Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         <Border Grid.Row="1" Grid.Column="0" Background="Transparent"
                             BorderBrush="Transparent"
@@ -84,7 +84,7 @@
                             BorderBrush="Transparent"
                             BorderThickness="1"
                             Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         
                     </Grid>
@@ -93,7 +93,7 @@
                             BorderBrush="Transparent"
                             BorderThickness="1"
                             Opacity="0.5">
-                        <TextBlock  Opacity="0.5" Background="Transparent" Text="]"></TextBlock>
+                        <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                     </Border>
                     
                     <Grid Grid.Row="0" Grid.Column="5" RowDefinitions="63,80,92" ColumnDefinitions="*">
@@ -102,7 +102,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         <Border Grid.Row="1" Grid.Column="0" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -115,7 +115,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         
                     </Grid>
@@ -124,7 +124,7 @@
                             BorderBrush="Transparent"
                             BorderThickness="1"
                             Opacity="0.5">
-                        <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                        <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                     </Border>
                     
                     
@@ -134,7 +134,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         <Border Grid.Row="1" Grid.Column="0" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -147,7 +147,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         
                     </Grid>
@@ -157,7 +157,7 @@
                             BorderBrush="Transparent"
                             BorderThickness="1"
                             Opacity="0.5">
-                        <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                        <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                     </Border>
                     
                     
@@ -170,13 +170,13 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         <Border Grid.Row="0" Grid.Column="1" Background="Transparent"
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[ReleaseRight].State}" Fill="CornflowerBlue" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ReleaseRight">
+                            <Path IsVisible="{Binding Switches[ReleaseRight].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ReleaseRight">
                                 <Path.Data>
                                     <PathGeometry>
                                         <PathGeometry.Figures>
@@ -194,7 +194,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                     </Grid>
                     
@@ -202,7 +202,7 @@
                             BorderBrush="Transparent"
                             BorderThickness="1"
                             Opacity="0.5">
-                        <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                        <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                     </Border>
                 
                     <Grid Grid.Row="2" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="57,80,36,80,147">
@@ -210,7 +210,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         <Border Grid.Row="0" Grid.Column="1" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -222,7 +222,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         <Border Grid.Row="0" Grid.Column="3" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -234,7 +234,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                     </Grid>
                 
@@ -243,7 +243,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                         <Border Grid.Row="0" Grid.Column="1" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -292,7 +292,7 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                            <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
                     </Grid>
                     
@@ -300,7 +300,7 @@
                             BorderBrush="Transparent"
                             BorderThickness="1"
                             Opacity="0.5">
-                        <TextBlock  Opacity="0.5" Background="Transparent" Text=""></TextBlock>
+                        <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                     </Border>
                 </Grid>
                 

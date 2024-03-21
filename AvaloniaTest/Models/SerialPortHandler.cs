@@ -4,7 +4,7 @@ using System.IO.Ports;
 
 namespace AvaloniaTest;
 
-public class SerialPortHandler : ISerialPortHandler
+public class SerialPortHandler : ISerialPortHandler, IDisposable
 {
         private SerialPort _serialPort;
         
@@ -12,7 +12,6 @@ public class SerialPortHandler : ISerialPortHandler
         {
             _serialPort = new SerialPort();
             
-            _serialPort.PortName = "COM3";
             _serialPort.BaudRate = 4800;
             _serialPort.DataBits = 8;
             _serialPort.StopBits = StopBits.One;
@@ -51,5 +50,15 @@ public class SerialPortHandler : ISerialPortHandler
 
         public event EventHandler DataReceived;
 
+        public void SetSelectedPort(string selectedDropdownItem)
+        {
+            _serialPort.PortName = selectedDropdownItem;
+        }
+
+        public void Dispose()
+        {
+            if (_serialPort.IsOpen) _serialPort.Close();
+            _serialPort.Dispose();
+        }
 }
 

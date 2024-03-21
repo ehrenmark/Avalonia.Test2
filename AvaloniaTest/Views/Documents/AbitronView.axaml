@@ -4,16 +4,51 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:documents="clr-namespace:AvaloniaTest.ViewModels.Documents"
              xmlns:documents1="clr-namespace:AvaloniaTest.Views.Documents"
-             mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="700"
+             mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="700"
              x:CompileBindings="True"
              x:DataType="documents:AbitronViewModel"
              x:Class="AvaloniaTest.Views.Documents.AbitronView">
     
-    <Grid>
-
-        <documents1:AbitronViewRemote Margin="50">
+    <Grid Margin="10,20,10,10" ShowGridLines="True" RowDefinitions="100,600" ColumnDefinitions="*">
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid ShowGridLines="True" RowDefinitions="*" ColumnDefinitions="*,*,*">
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Button Command="{Binding Start}" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Start" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid ShowGridLines="True" RowDefinitions="*,*" ColumnDefinitions="*">
+                        <Grid Grid.Row="0" Grid.Column="0">
+                            <TextBlock Text="Selected Port:" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <TextBlock Text="asdf" Foreground="White"  TextAlignment="Center" VerticalAlignment="Center" FontSize="30"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </Grid>   
+                
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Button Command="{Binding Stop}" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Stop" Foreground="White"  TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+                    </Button>
+                </Grid>    
+                    
+                
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <documents1:AbitronViewRemote Margin="0,0,0,10" >
             
-        </documents1:AbitronViewRemote>
+            </documents1:AbitronViewRemote>
+        </Grid>
+        
+        <!--<Button Command="{Binding Start}" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Start" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </Button>
+        <Button Command="{Binding Stop}" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Stop" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </Button>-->
     </Grid>
     
     <!--<Design.DataContext>

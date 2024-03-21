@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reactive;
+using System.Text.Unicode;
 using System.Xml.Linq;
 using AvaloniaTest.ViewModels.Documents;
 using DynamicData.Binding;
@@ -13,16 +14,28 @@ namespace AvaloniaTest.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         private bool _isMenuItemChecked;
+        private SerialPortHandler _serialPortHandler;
 
         public MainWindowViewModel()
         {
-            SetupModel setupModel = new SetupModel();
+            _serialPortHandler = new SerialPortHandler();
             
             
-            MenuItems.Add(new SideMenuItem() { Title = "Setup", Content = new SideMenuTextViewModel(){ Txt = "Setup"}});
-            MenuItems.Add(new SideMenuItem() { Title = "Abitron", Content = new SideMenuTextViewModel() {Txt = "Abitron"}});
-            MenuItems.Add(new SideMenuItem() { Title = "Hetronic", Content = new SideMenuTextViewModel() });
-            MenuItems.Add(new SideMenuItem() { Title = "CSL", Content = new SideMenuTextViewModel() });
+            AbitronSetupModel abitronSetupModel = new AbitronSetupModel();
+            AbitronViewModel abitronViewModel = new AbitronViewModel(_serialPortHandler);
+            // AbitronAssistViewModel abitronAssistViewModel = new AbitronAssistViewModel(_serialPortHandler);
+            
+            SetupViewModel setupViewModel = new SetupViewModel(_serialPortHandler);
+            setupViewModel.SerialPortChanged += (sender, args) =>
+            {
+                abitronViewModel.SerialPortChanged();
+            };
+            
+            MenuItems.Add(new SideMenuItem() { Title = "Setup", Content = setupViewModel});
+            MenuItems.Add(new SideMenuItem() { Title = "Abitron", Content = abitronViewModel});
+            MenuItems.Add(new SideMenuItem() { Title = "Abitron Assisted Test"});
+            MenuItems.Add(new SideMenuItem() { Title = "Hetronic", Content = new SideMenuTextViewModel() {Txt = "Hetronic"}});
+            MenuItems.Add(new SideMenuItem() { Title = "CSL", Content = new SideMenuTextViewModel() {Txt = "CSL"}});
             MenuItems[1].IsActive = true;
             MainContent = MenuItems[0].Content;
             ToggleMenuItemCheckedCommand = ReactiveCommand.Create(() =>
@@ -31,6 +44,8 @@ namespace AvaloniaTest.ViewModels
             });
             
         }
+        
+        
 
         public bool IsMenuItemChecked
         {
@@ -45,6 +60,7 @@ namespace AvaloniaTest.ViewModels
         private MainContentViewModel _mainContent;
 
         public ObservableCollectionExtended<SideMenuItem> MenuItems { get; set; } = new();
+
 
         public MainContentViewModel MainContent
         {
@@ -69,7 +85,7 @@ namespace AvaloniaTest.ViewModels
                 // If AbitronViewModel item doesn't exist, insert it
                 else if (item == MenuItems[1])
                 {
-                    MenuItems.Insert(2, new SideMenuItem() { Title = "- Abitron Overview", Content = new AbitronViewModel() });
+                    //MenuItems.Insert(2, new SideMenuItem() { Title = "- Abitron Overview", Content = new AbitronViewModel() });
                 }
             }
         }

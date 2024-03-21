@@ -3,11 +3,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:documents="clr-namespace:AvaloniaTest.ViewModels.Documents"
+             xmlns:documents1="clr-namespace:AvaloniaTest.Views.Documents"
              mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="700"
              x:CompileBindings="True"
-             x:DataType="documents:SideMenuTextViewModel"
-             x:Class="AvaloniaTest.Views.Documents.SideMenuTextView">
-    <Design.DataContext>
-        <documents:SideMenuTextViewModel/>
-    </Design.DataContext>
+             x:DataType="documents:SetupViewModel"
+             x:Class="AvaloniaTest.Views.Documents.SetupView">
+   
+    
+    <Grid>
+
+        <documents1:SetupUserControl Margin="50">
+            
+        </documents1:SetupUserControl>
+    </Grid>
 </UserControl>

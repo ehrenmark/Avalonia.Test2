@@ -76,8 +76,11 @@ public class AbitronViewModel : MainContentViewModel
             //OnPropertyChanged(nameof(DKState));
         }
     }
-    
-    
+
+    public void SerialPortChanged()
+    {
+        
+    }
 
     public byte[] DatArray
     {
@@ -90,15 +93,11 @@ public class AbitronViewModel : MainContentViewModel
     }
     
     
-    public AbitronViewModel()
+    public AbitronViewModel(ISerialPortHandler portHandler)
     {
-        _serialPortHandler = new FakePortHandler();
+        _serialPortHandler = portHandler;
         _telegram = new HSTelegram();
         _buffer = new List<byte>(10000);
-        
-        _serialPortHandler.Open();
-        _serialPortHandler.DataReceived+=DataReceived;
-        _telegram.TelegramReceivedEvent+=TelegramOnTelegramReceivedEvent;
         
         var configJson = File.ReadAllText(@"SetupJSON\\setupabitron.json");
         var configData = JsonConvert.DeserializeObject<ConfigData>(configJson);
@@ -108,28 +107,20 @@ public class AbitronViewModel : MainContentViewModel
         {
             Switches.Add(configDataSwitch.Name, new SwitchViewModel(configDataSwitch));
         }
-        
-        
-        // for (int i = 0; i < 82; i++)
-        // {
-        //     Switches.Add(new SwitchViewModel(false));
-        // }
-        //
-        // foreach (var switchConfig in configData.Switches)
-        // {
-        //     int dkStateIndex = switchConfig.DKState - 1; // Adjusting to 0-based indexing
-        //     if (dkStateIndex >= 0 && dkStateIndex < Switches.Count)
-        //     {
-        //         Switches[dkStateIndex].DKState = switchConfig.DKState;
-        //         Switches[dkStateIndex].DatState = switchConfig.DatState;
-        //         Switches[dkStateIndex].PositionX = switchConfig.PositionX;
-        //         Switches[dkStateIndex].PositionY = switchConfig.PositionY;
-        //     }
-        //     else
-        //     {
-        //         Console.WriteLine($"Invalid DKState value {switchConfig.DKState} for switch {switchConfig.Name}");
-        //     }
-        // }
+    }
+
+    public void Start()
+    {
+        _serialPortHandler.Open();
+        _serialPortHandler.DataReceived+=DataReceived;
+        _telegram.TelegramReceivedEvent+=TelegramOnTelegramReceivedEvent;
+    }
+
+    public void Stop()
+    {
+        _serialPortHandler.DataReceived-=DataReceived;
+        _telegram.TelegramReceivedEvent-=TelegramOnTelegramReceivedEvent;
+        _serialPortHandler.Close();
     }
 
     private void TelegramOnTelegramReceivedEvent(object sender, BaseTelegram.TelegramEventArgs e)
