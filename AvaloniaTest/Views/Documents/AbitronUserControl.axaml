@@ -1,0 +1,139 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:documents="clr-namespace:AvaloniaTest.ViewModels.Documents"
+             xmlns:documents1="clr-namespace:AvaloniaTest.Views.Documents"
+             mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="800"
+             x:CompileBindings="True"
+             x:DataType="documents:AbitronViewModel"
+             x:Class="AvaloniaTest.Views.Documents.AbitronUserControl">
+    
+    <Grid Margin="10,20,10,10" ShowGridLines="True" RowDefinitions="200,10,600" ColumnDefinitions="*">
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid ShowGridLines="True" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*">
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Grid ShowGridLines="False" RowDefinitions="*,*" ColumnDefinitions="*">
+                        <Grid Grid.Row="0" Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Row="0" Grid.Column="0">
+                            
+                        </Grid>
+                        
+                    </Grid>
+                    
+                    
+                    <Button Command="{Binding Start}" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Connect" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid ShowGridLines="False" RowDefinitions="*,*" ColumnDefinitions="*">
+                        <Grid Grid.Row="0" Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Row="0" Grid.Column="0">
+                            
+                        </Grid>
+                        
+                    </Grid>
+                    
+                    
+                    <Button Command="{Binding Start}" Width="250" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Start Test" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+                    </Button>
+                </Grid>
+                
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid ShowGridLines="True" RowDefinitions="*,*" ColumnDefinitions="*">
+                        <Grid Grid.Row="0" Grid.Column="0">
+                            <TextBlock Text="Selected Port:" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <TextBlock Text="{Binding }" Foreground="White"  TextAlignment="Center" VerticalAlignment="Center" FontSize="30"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </Grid>   
+                
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Button Command="{Binding Stop}" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Disconnect" Foreground="White"  TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+                    </Button>
+                </Grid>    
+                
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Grid ShowGridLines="False" RowDefinitions="*,*" ColumnDefinitions="*">
+                        <Grid Grid.Row="0" Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Row="0" Grid.Column="0">
+                            
+                        </Grid>
+                        
+                    </Grid>
+                    
+                    
+                    <Button Command="{Binding Start}" Width="250" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Cancel Test" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+                    </Button>
+                </Grid>
+                    
+                
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="0">
+            <documents1:AbitronViewRemote Margin="0,0,0,10" >
+            
+            </documents1:AbitronViewRemote>
+        </Grid>
+        
+        <!--<Button Command="{Binding Start}" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Start" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </Button>
+        <Button Command="{Binding Stop}" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Stop" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </Button>-->
+    </Grid>
+    
+    <!--<Design.DataContext>
+        <documents:AbitronViewModel/>
+    </Design.DataContext>
+   
+    <Panel>
+        <Image Margin="50" d:DesignWidth="1400" d:DesignHeight="700"
+               Source="avares://AvaloniaTest/Assets/Abitron.png"/>
+        
+        <ItemsControl ItemsSource="{Binding Switches}">
+            
+            <ItemsControl.ItemTemplate>
+                <DataTemplate> 
+                    <CheckBox Height="{Binding PositionY}" Width="{Binding PositionX}" IsChecked="{Binding State}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Panel>-->
+    
+    <!--<ScrollViewer>
+        
+        ~1~ Beispiel-Elemente, um die Datenbindung zu zeigen @1@
+        <ItemsControl ItemsSource="{Binding DKState}">
+            
+            <ItemsControl.ItemTemplate>
+                <DataTemplate> 
+                    <CheckBox IsChecked="{Binding State}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
+        ~1~<ItemsControl ItemsSource="{Binding DatArray}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <ToggleButton IsChecked="{Binding}" Content="Toggle" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>@1@
+
+    </ScrollViewer>-->
+    
+</UserControl>

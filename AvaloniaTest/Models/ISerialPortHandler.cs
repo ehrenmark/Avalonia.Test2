@@ -9,4 +9,5 @@ public interface ISerialPortHandler
     void Close();
     List<byte> ReadData();
     event EventHandler DataReceived;
+    
 }

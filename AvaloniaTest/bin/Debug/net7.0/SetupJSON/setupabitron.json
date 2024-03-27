@@ -156,7 +156,7 @@
     },
     {
       "name": "SprayDustOn",
-      "DKState": "40",
+      "DKState": "41",
       "DatState": "6",
       "positionX": "100",
       "positionY": "100",
@@ -164,7 +164,7 @@
     },
     {
       "name": "SprayDustOff",
-      "DKState": "41",
+      "DKState": "40",
       "DatState": "5",
       "positionX": "100",
       "positionY": "100",

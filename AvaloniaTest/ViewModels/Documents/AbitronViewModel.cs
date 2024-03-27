@@ -65,6 +65,7 @@ public class AbitronViewModel : MainContentViewModel
     private AvaloniaDictionary<string, SwitchViewModel> _switches;
     private byte[] _datarray;
     
+
     
     public AvaloniaDictionary<string, SwitchViewModel> Switches
     {
@@ -102,12 +103,15 @@ public class AbitronViewModel : MainContentViewModel
         var configJson = File.ReadAllText(@"SetupJSON\\setupabitron.json");
         var configData = JsonConvert.DeserializeObject<ConfigData>(configJson);
         
+        
         Switches = new();
         foreach (var configDataSwitch in configData.Switches)
         {
             Switches.Add(configDataSwitch.Name, new SwitchViewModel(configDataSwitch));
         }
     }
+    
+    
 
     public void Start()
     {

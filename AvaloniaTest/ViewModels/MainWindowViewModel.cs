@@ -33,7 +33,7 @@ namespace AvaloniaTest.ViewModels
             
             MenuItems.Add(new SideMenuItem() { Title = "Setup", Content = setupViewModel});
             MenuItems.Add(new SideMenuItem() { Title = "Abitron", Content = abitronViewModel});
-            MenuItems.Add(new SideMenuItem() { Title = "Abitron Assisted Test"});
+            MenuItems.Add(new SideMenuItem() { Title = "Abitron Assisted Test", Content = abitronViewModel});
             MenuItems.Add(new SideMenuItem() { Title = "Hetronic", Content = new SideMenuTextViewModel() {Txt = "Hetronic"}});
             MenuItems.Add(new SideMenuItem() { Title = "CSL", Content = new SideMenuTextViewModel() {Txt = "CSL"}});
             MenuItems[1].IsActive = true;

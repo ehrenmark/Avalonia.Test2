@@ -21,32 +21,38 @@
             <Image  Source="avares://AvaloniaTest/Assets/Abitron.png"/>
         <Grid RowDefinitions="235,*" ColumnDefinitions="*">
             <Grid Grid.Row="0" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="700,400">
-                <Grid Grid.Row="0" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="38,80,146,80,35,80,28,125,88">
+                <Grid Grid.Row="0" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="38,80,146,80,36,80,27,125,88">
                     <Border Grid.Row="0" Grid.Column="0" Background="Transparent"
-                            BorderBrush="Blue"
-                            BorderThickness="5"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
                             Opacity="0.5">
                         <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                     </Border>
                     
                     <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,*" ColumnDefinitions="*">
-                        <Border Grid.Row="0" Grid.Column="0" Background="Transparent"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[ReleaseLeft].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ReleaseLeft">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,0">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>
+                        <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[ReleaseLeft].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ReleaseLeft">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,0">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>
+
+                                <!-- Rechteck -->
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                        
                         </Border>
                         <Border Grid.Row="1" Grid.Column="0" Background="Transparent"
@@ -73,12 +79,18 @@
                             Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="1" Grid.Column="0" Background="Transparent"
-                            BorderBrush="Transparent"
-                            BorderThickness="1"
-                            Opacity="0.5">
-                            <Ellipse IsVisible="{Binding Switches[MotorVerify].State}" Width="80" Height="80" Fill="LimeGreen" Name="MotorVerify"/>
-
+                        <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Ellipse IsVisible="{Binding Switches[MotorVerify].State}" Width="80" Height="80" Fill="LimeGreen" Name="MotorVerify"/>
+                                <Path  Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,80" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
+                            
+                            
+                            
                         </Border>
                         <Border Grid.Row="2" Grid.Column="0" Background="Transparent"
                             BorderBrush="Transparent"
@@ -104,12 +116,17 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="1" Grid.Column="0" Background="Transparent"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Ellipse IsVisible="{Binding Switches[RadioStart].State}" Width="80" Height="80" Fill="LimeGreen" Name="RadioStart"/>
-
+                        <Border Grid.Row="1" Grid.Column="0" Background="Transparent" >
+                            <Grid>
+                                
+                                <Ellipse IsVisible="{Binding Switches[RadioStart].State}" Width="80" Height="80" Fill="LimeGreen" Name="RadioStart"/>
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,80" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
+                                
                         </Border>
                         <Border Grid.Row="2" Grid.Column="0" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -136,12 +153,16 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="1" Grid.Column="0" Background="Transparent"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Ellipse IsVisible="{Binding Switches[Stop].State}" Width="125" Height="125" Fill="LimeGreen" Name="Stop"/>
-
+                        <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Ellipse IsVisible="{Binding Switches[Stop].State}" Width="125" Height="125" Fill="LimeGreen" Name="Stop"/>
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,125,125" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
+                                
                         </Border>
                         <Border Grid.Row="2" Grid.Column="0" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -172,23 +193,27 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="0" Grid.Column="1" Background="Transparent"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[ReleaseRight].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ReleaseRight">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,0">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>
+                        <Border Grid.Row="0" Grid.Column="1" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[ReleaseRight].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ReleaseRight">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,0">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
                         <Border Grid.Row="0" Grid.Column="2" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -212,11 +237,15 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="0" Grid.Column="1" Background="Transparent"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Ellipse IsVisible="{Binding Switches[Sump].State}" Width="80" Height="80" Fill="LimeGreen" Name="Sump"/>
+                        <Border Grid.Row="0" Grid.Column="1" Background="Transparent">
+                            <Grid>
+                                <Ellipse IsVisible="{Binding Switches[Sump].State}" Width="80" Height="80" Fill="LimeGreen" Name="Sump"/>
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,80" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
                         <Border Grid.Row="0" Grid.Column="2" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -224,11 +253,16 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="0" Grid.Column="3" Background="Transparent"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Ellipse IsVisible="{Binding Switches[Fast].State}" Width="80" Height="80" Fill="LimeGreen" Name="Fast"/>
+                        <Border Grid.Row="0" Grid.Column="3" Background="Transparent">
+                            <Grid>
+                                <Ellipse IsVisible="{Binding Switches[Fast].State}" Width="80" Height="80" Fill="LimeGreen" Name="Fast"/>
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,80" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
+                            
                         </Border>
                         <Border Grid.Row="0" Grid.Column="4" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -245,48 +279,56 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="DeepPink" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="0" Grid.Column="1" Background="Transparent"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[TramSlewLeft].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="TramSlewLeft">
-                                <Path.RenderTransform>
-                                    <RotateTransform Angle="-90" CenterX="0" CenterY="0"/>
-                                </Path.RenderTransform>
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,40">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>
+                        <Border Grid.Row="0" Grid.Column="1" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[TramSlewLeft].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="TramSlewLeft">
+                                    <Path.RenderTransform>
+                                        <RotateTransform Angle="-90" CenterX="0" CenterY="0"/>
+                                    </Path.RenderTransform>
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,40">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,40,80" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
 
                         </Border>
-                        <Border Grid.Row="0" Grid.Column="2" Background="Transparent"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[TramSlewRight].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="TramSlewRight">
-                                <Path.RenderTransform>
-                                    <RotateTransform Angle="90" CenterX="0" CenterY="0"/>
-                                </Path.RenderTransform>
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,40">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                        
+                        <Border Grid.Row="0" Grid.Column="2" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[TramSlewRight].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="TramSlewRight">
+                                    <Path.RenderTransform>
+                                        <RotateTransform Angle="90" CenterX="0" CenterY="0"/>
+                                    </Path.RenderTransform>
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,40">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>  
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,40,80" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
                         <Border Grid.Row="0" Grid.Column="3" Background="Transparent"
                                 BorderBrush="Transparent"
@@ -321,41 +363,49 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[TramUp].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="TramUp">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,40">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                        
+                        <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[TramUp].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="TramUp">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,40">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>   
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
-                        <Border Grid.Row="2" Grid.Column="0" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[TramDown].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="TramDown">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,0">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                        
+                        <Border Grid.Row="2" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[TramDown].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="TramDown">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,0">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
                         <Border Grid.Row="3" Grid.Column="0" Background="Gainsboro"
                                 BorderBrush="Transparent"
@@ -363,41 +413,49 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="4" Grid.Column="0" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[CutterOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CutterOn">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,40">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                         
+                        <Border Grid.Row="4" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[CutterOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CutterOn">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,40">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path> 
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
-                        <Border Grid.Row="5" Grid.Column="0" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[CutterOff].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CutterOff">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,0">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                        
+                        <Border Grid.Row="5" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[CutterOff].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CutterOff">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,0">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path> 
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
                         <Border Grid.Row="6" Grid.Column="0" Background="Gainsboro"
                                 BorderBrush="Transparent"
@@ -436,47 +494,55 @@
                             <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
                         </Border>
                         <Grid Grid.Row="1" Grid.Column="0" RowDefinitions="*" ColumnDefinitions="40,40">
-                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path IsVisible="{Binding Switches[TramTurnLeft].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="TramTurnLeft">
-                                    <Path.RenderTransform>
-                                        <RotateTransform Angle="-90" CenterX="0" CenterY="0"/>
-                                    </Path.RenderTransform>
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,40">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                            
+                            <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path IsVisible="{Binding Switches[TramTurnLeft].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="TramTurnLeft">
+                                        <Path.RenderTransform>
+                                            <RotateTransform Angle="-90" CenterX="0" CenterY="0"/>
+                                        </Path.RenderTransform>
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>    
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,40,80" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
-                            <Border Grid.Row="0" Grid.Column="1" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path IsVisible="{Binding Switches[TramTurnRight].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="TramTurnRight">
-                                    <Path.RenderTransform>
-                                        <RotateTransform Angle="90" CenterX="0" CenterY="0"/>
-                                    </Path.RenderTransform>
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,40">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                                                    
+                            <Border Grid.Row="0" Grid.Column="1" Background="Transparent">
+                                <Grid>
+                                    <Path IsVisible="{Binding Switches[TramTurnRight].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="TramTurnRight">
+                                        <Path.RenderTransform>
+                                            <RotateTransform Angle="90" CenterX="0" CenterY="0"/>
+                                        </Path.RenderTransform>
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path> 
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,40,80" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
                         </Grid>
                         <Border Grid.Row="2" Grid.Column="0" Background="Gainsboro"
@@ -485,41 +551,49 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="3" Grid.Column="0" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[ConveyorOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ConveyorOn">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,40">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                         
+                        <Border Grid.Row="3" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[ConveyorOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ConveyorOn">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,40">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>  
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
-                        <Border Grid.Row="4" Grid.Column="0" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[ConveyorOff].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ConveyorOff">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,0">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                        
+                        <Border Grid.Row="4" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[ConveyorOff].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ConveyorOff">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,0">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>    
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
                         <Border Grid.Row="5" Grid.Column="0" Background="Gainsboro"
                                 BorderBrush="Transparent"
@@ -527,41 +601,49 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="6" Grid.Column="0" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[ConveyorReverseOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ConveyorReverseOn">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,40">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                         
+                        <Border Grid.Row="6" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[ConveyorReverseOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ConveyorReverseOn">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,40">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path> 
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
-                        <Border Grid.Row="7" Grid.Column="0" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[ConveyorReverseOff].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ConveyorReverseOff">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,0">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                        
+                        <Border Grid.Row="7" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[ConveyorReverseOff].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ConveyorReverseOff">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,0">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>  
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
                         <Border Grid.Row="8" Grid.Column="0" Background="Gainsboro"
                                 BorderBrush="Transparent"
@@ -599,41 +681,49 @@
                                 Opacity="0.5">
                             <TextBlock  Opacity="0.5" Background="LimeGreen" Text=""></TextBlock>
                         </Border>
-                        <Border Grid.Row="3" Grid.Column="0" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[HydraulicsOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="HydraulicsOn">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,40">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                         
+                        <Border Grid.Row="3" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[HydraulicsOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="HydraulicsOn">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,40">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>   
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
-                        <Border Grid.Row="4" Grid.Column="0" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path IsVisible="{Binding Switches[HydraulicsOff].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="HydraulicsOff">
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,0">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                        
+                        <Border Grid.Row="4" Grid.Column="0" Background="Transparent">
+                            <Grid>
+                                <Path IsVisible="{Binding Switches[HydraulicsOff].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="HydraulicsOff">
+                                    <Path.Data>
+                                        <PathGeometry>
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="0,0">
+                                                    <PathFigure.Segments>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                    </PathFigure.Segments>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Path.Data>
+                                </Path>    
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
                         <Border Grid.Row="5" Grid.Column="0" Background="Gainsboro"
                                 BorderBrush="Transparent"
@@ -687,28 +777,30 @@
                         </Border>
                         
                         <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,40" ColumnDefinitions="*">
-                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path  IsVisible="{Binding Switches[Spare1Up].State}"   Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="Spare2Up">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,40">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                             
+                            <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path  IsVisible="{Binding Switches[Spare2Up].State}"   Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="Spare2Up">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>     
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
-                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
+                            <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                                <Grid>
                                 <Path  IsVisible="{Binding Switches[Spare2Down].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="Spare2Down">
                                     <Path.Data>
                                         <PathGeometry>
@@ -721,7 +813,13 @@
                                             </PathGeometry.Figures>
                                         </PathGeometry>
                                     </Path.Data>
-                                </Path>                            
+                                </Path>     
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,80,40" />
+                                    </Path.Data>
+                                </Path>
+                                    </Grid>
                             </Border>
                         </Grid>
                         
@@ -733,41 +831,49 @@
                         </Border>
 
                         <Grid Grid.Row="0" Grid.Column="3" RowDefinitions="40,40" ColumnDefinitions="*">
-                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path IsVisible="{Binding Switches[Spare1Up].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="Spare1Up">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,40">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                             
+                            <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path IsVisible="{Binding Switches[Spare1Up].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="Spare1Up">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>   
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
-                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path  IsVisible="{Binding Switches[Spare1Down].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="Spare1Down">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,0">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                            
+                            <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path  IsVisible="{Binding Switches[Spare1Down].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="Spare1Down">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,0">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>       
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
                         </Grid>
                         
@@ -799,41 +905,49 @@
                         
                         <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,40" ColumnDefinitions="*">
                             
-                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path IsVisible="{Binding Switches[SprayDustOn].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="SprayDustOn">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,40">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                             
+                            <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path IsVisible="{Binding Switches[SprayDustOn].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="SprayDustOn">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>    
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
-                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path IsVisible="{Binding Switches[SprayDustOff].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="SprayDustOff">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,0">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                            
+                            <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path IsVisible="{Binding Switches[SprayDustOff].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="SprayDustOff">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,0">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>  
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
                         </Grid>
                         
@@ -864,41 +978,49 @@
                         
                         <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,40" ColumnDefinitions="*">
                             
-                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path  IsVisible="{Binding Switches[CoolingOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CoolingOn">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,40">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                             
+                            <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path  IsVisible="{Binding Switches[CoolingOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CoolingOn">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>    
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
-                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path IsVisible="{Binding Switches[CoolingOff].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CoolingOff">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,0">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                            
+                            <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path IsVisible="{Binding Switches[CoolingOff].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CoolingOff">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,0">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>  
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
                         </Grid>
                         
@@ -940,11 +1062,65 @@
                         
                         <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,40" ColumnDefinitions="*">
                             
-                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path IsVisible="{Binding Switches[ChainUp].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ChainUp">
+                            <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path IsVisible="{Binding Switches[ChainUp].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ChainUp">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>  
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
+                            </Border>
+                            <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path  IsVisible="{Binding Switches[ChainDown].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ChainDown">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,0">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path> 
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        
+                        <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
+                                BorderBrush="Transparent"
+                                BorderThickness="1"
+                                Opacity="0.5">
+                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                        </Border>
+                        
+                        <Border Grid.Row="0" Grid.Column="3" Background="Transparent">
+                            <Grid>
+                                <Path  IsVisible="{Binding Switches[ChainLeft].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="ChainLeft">
+                                    <Path.RenderTransform>
+                                        <RotateTransform Angle="-90" CenterX="0" CenterY="0"/>
+                                    </Path.RenderTransform>
                                     <Path.Data>
                                         <PathGeometry>
                                             <PathGeometry.Figures>
@@ -956,78 +1132,40 @@
                                             </PathGeometry.Figures>
                                         </PathGeometry>
                                     </Path.Data>
-                                </Path>                             
-                            </Border>
-                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path  IsVisible="{Binding Switches[ChainDown].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ChainDown">
+                                </Path>   
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,40,80" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
+                        </Border>
+                        
+                        <Border Grid.Row="0" Grid.Column="4" Background="Transparent">
+                            <Grid>
+
+                                <Path  IsVisible="{Binding Switches[ChainRight].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="ChainRight">
+                                    <Path.RenderTransform>
+                                        <RotateTransform Angle="90" CenterX="0" CenterY="0"/>
+                                    </Path.RenderTransform>
                                     <Path.Data>
                                         <PathGeometry>
                                             <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,0">
+                                                <PathFigure StartPoint="0,40">
                                                     <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
                                                     </PathFigure.Segments>
                                                 </PathFigure>
                                             </PathGeometry.Figures>
                                         </PathGeometry>
                                     </Path.Data>
-                                </Path>                            
-                            </Border>
-                        </Grid>
-                        
-                        <Border Grid.Row="0" Grid.Column="2" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
-                        </Border>
-                        
-                        <Border Grid.Row="0" Grid.Column="3" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-                            <Path  IsVisible="{Binding Switches[ChainLeft].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="ChainLeft">
-                                <Path.RenderTransform>
-                                    <RotateTransform Angle="-90" CenterX="0" CenterY="0"/>
-                                </Path.RenderTransform>
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,40">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                        
-                        </Border>
-                        
-                        <Border Grid.Row="0" Grid.Column="4" Background="Gainsboro"
-                                BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Opacity="0.5">
-
-                            <Path  IsVisible="{Binding Switches[ChainRight].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Name="ChainRight">
-                                <Path.RenderTransform>
-                                    <RotateTransform Angle="90" CenterX="0" CenterY="0"/>
-                                </Path.RenderTransform>
-                                <Path.Data>
-                                    <PathGeometry>
-                                        <PathGeometry.Figures>
-                                            <PathFigure StartPoint="0,40">
-                                                <PathFigure.Segments>
-                                                    <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                </PathFigure.Segments>
-                                            </PathFigure>
-                                        </PathGeometry.Figures>
-                                    </PathGeometry>
-                                </Path.Data>
-                            </Path>                        
+                                </Path>   
+                                <Path Stroke="Red" StrokeThickness="5">
+                                    <Path.Data>
+                                        <RectangleGeometry Rect="0,0,40,80" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
                         </Border>
             
                         
@@ -1040,41 +1178,49 @@
                         
                         <Grid Grid.Row="0" Grid.Column="6" RowDefinitions="40,40" ColumnDefinitions="*">
                             
-                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path IsVisible="{Binding Switches[CutterBoomUp].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CutterBoomUp">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,40">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                             
+                            <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path IsVisible="{Binding Switches[CutterBoomUp].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CutterBoomUp">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>  
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                            </Grid>
                             </Border>
-                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path  IsVisible="{Binding Switches[CutterBoomDown].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CutterBoomDown">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,0">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                            
+                            <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path  IsVisible="{Binding Switches[CutterBoomDown].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CutterBoomDown">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,0">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path> 
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
                         </Grid>
                         
@@ -1105,42 +1251,50 @@
                         
                         <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="40,40" ColumnDefinitions="*">
                             
-                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path  IsVisible="{Binding Switches[ShovelUp].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ShovelUp">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,40">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path> 
+                            <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path  IsVisible="{Binding Switches[ShovelUp].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ShovelUp">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path> 
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                                 
                             </Border>
-                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path IsVisible="{Binding Switches[ShovelDown].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ShoveDown">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,0">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                            
+                            <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path IsVisible="{Binding Switches[ShovelDown].State}"  Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="ShoveDown">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,0">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path> 
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
                         </Grid>
                         
@@ -1153,41 +1307,49 @@
                         
                         <Grid Grid.Row="0" Grid.Column="3" RowDefinitions="40,40" ColumnDefinitions="*">
                             
-                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path  IsVisible="{Binding Switches[StabilizerUp].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="StabilizerUp">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,40">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path> 
+                            <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path  IsVisible="{Binding Switches[StabilizerUp].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="StabilizerUp">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path> 
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
-                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path  IsVisible="{Binding Switches[StabilizerDown].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="StabilizerDown">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,0">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                            
+                            <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path  IsVisible="{Binding Switches[StabilizerDown].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="StabilizerDown">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,0">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path> 
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
                         </Grid>
             
@@ -1201,41 +1363,49 @@
                         
                         <Grid Grid.Row="0" Grid.Column="5" RowDefinitions="40,40" ColumnDefinitions="*">
                             
-                            <Border Grid.Row="0" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path  IsVisible="{Binding Switches[AuxFanOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="AuxFanOn">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,40">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path> 
+                            <Border Grid.Row="0" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path  IsVisible="{Binding Switches[AuxFanOn].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="AuxFanOn">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,40">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="Clockwise" Point="80,40"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path> 
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
-                            <Border Grid.Row="1" Grid.Column="0" Background="Gainsboro"
-                                    BorderBrush="Transparent"
-                                    BorderThickness="1"
-                                    Opacity="0.5">
-                                <Path  IsVisible="{Binding Switches[AuxFanOff].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="AuxFanOff">
-                                    <Path.Data>
-                                        <PathGeometry>
-                                            <PathGeometry.Figures>
-                                                <PathFigure StartPoint="0,0">
-                                                    <PathFigure.Segments>
-                                                        <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
-                                                    </PathFigure.Segments>
-                                                </PathFigure>
-                                            </PathGeometry.Figures>
-                                        </PathGeometry>
-                                    </Path.Data>
-                                </Path>                            
+                            <Border Grid.Row="1" Grid.Column="0" Background="Transparent">
+                                <Grid>
+                                    <Path  IsVisible="{Binding Switches[AuxFanOff].State}" Fill="LimeGreen" Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Name="AuxFanOff">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathGeometry.Figures>
+                                                    <PathFigure StartPoint="0,0">
+                                                        <PathFigure.Segments>
+                                                            <ArcSegment Size="40,40" IsLargeArc="False" SweepDirection="CounterClockwise" Point="80,0"/>
+                                                        </PathFigure.Segments>
+                                                    </PathFigure>
+                                                </PathGeometry.Figures>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path> 
+                                    <Path Stroke="Red" StrokeThickness="5">
+                                        <Path.Data>
+                                            <RectangleGeometry Rect="0,0,80,40" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
                             </Border>
                         </Grid>
                         
@@ -1243,8 +1413,14 @@
                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Opacity="0.5">
-                            <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                            
+                                <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
+                            
+                            
+                            
+                         
                         </Border>
+                        
                         
                     </Grid>
                     
@@ -1254,6 +1430,8 @@
                             Opacity="0.5">
                         <TextBlock  Opacity="0.5" Background="Purple" Text=""></TextBlock>
                     </Border>
+                    
+                    
                     
                     
                     

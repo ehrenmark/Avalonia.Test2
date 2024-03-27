@@ -11,8 +11,12 @@
         <entry key="Styles/SideBar.axaml" value="AvaloniaTest.csproj" />
         <entry key="Styles/Styles.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/Documents/AbitronLayout.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Views/Documents/AbitronTestUserControl.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Views/Documents/AbitronTestView.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Views/Documents/AbitronUserControl.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/Documents/AbitronView.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/Documents/AbitronViewRemote.axaml" value="AvaloniaTest.csproj" />
+        <entry key="Views/Documents/AbitronViewUserControl.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/Documents/SetupUserControl.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/Documents/SetupView.axaml" value="AvaloniaTest.csproj" />
         <entry key="Views/Documents/SideMenuTextView.axaml" value="AvaloniaTest.csproj" />
